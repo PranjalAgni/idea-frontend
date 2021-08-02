@@ -1,5 +1,6 @@
 import { Reducer } from 'redux';
-import { UserActionTypes, UserState } from './types';
+import { ActionType } from 'typesafe-actions';
+import { UserActionTypes, UserSignupSuccess, UserState } from './types';
 
 export const initialState: UserState = {
   fullName: null,
