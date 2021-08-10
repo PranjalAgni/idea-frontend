@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactNode } from "react";
 import {
 	Image,
 	ImageSourcePropType,
@@ -22,7 +23,7 @@ export type ButtonProps = ViewProps & {
 	color?: "primary" | "secondary";
 	loading?: boolean;
 	disabled?: boolean;
-	title: never;
+	title: string | ReactNode;
 	onPress?: () => void;
 };
 

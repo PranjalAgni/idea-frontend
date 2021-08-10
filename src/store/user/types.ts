@@ -10,7 +10,7 @@ export type UserSignupSuccess = {
 };
 
 export type UserSignupFailed = {
-	errors: unknown[];
+	errors: Record<string, unknown>[];
 };
 
 export enum UserActionTypes {
@@ -25,5 +25,5 @@ export interface UserState {
 	readonly email: string | null;
 	readonly isAuthenticated: boolean;
 	readonly isLoading: boolean;
-	readonly errors?: unknown;
+	readonly errors?: Record<string, unknown>;
 }
