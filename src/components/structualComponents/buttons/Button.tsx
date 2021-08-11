@@ -14,8 +14,8 @@ import {
 	paragraphBold,
 	radius,
 	smallBold
-} from "../../constants/appStyle";
-import { Spinner } from "../Spinner";
+} from "../../../constants/appStyle";
+import { Spinner } from "./../animations/Spinner";
 
 export type ButtonProps = ViewProps & {
 	iconSrc?: ImageSourcePropType;

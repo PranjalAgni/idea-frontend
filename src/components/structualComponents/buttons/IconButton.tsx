@@ -7,7 +7,7 @@ import {
 	TouchableOpacity,
 	ViewStyle
 } from "react-native";
-import { colors } from "../../constants/appStyle";
+import { colors } from "../../../constants/appStyle";
 
 interface IconButtonProps {
 	style?: StyleProp<ViewStyle>;
