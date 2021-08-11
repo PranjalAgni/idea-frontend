@@ -109,6 +109,9 @@ package-lock.json
 .vscode
 .vs
 
+# Expo
+*.expo/*
+
 # Android memory profiler files
 *.hprof
 © 2021 GitHub, Inc.

@@ -1,6 +1,6 @@
 import React from "react";
 import { Animated, Easing, ViewProps } from "react-native";
-import { colors } from "../constants/appStyle";
+import { colors } from "../../../constants/appStyle";
 
 export type SpinnerProps = ViewProps & {
 	size?: "s" | "m";
