@@ -4,9 +4,9 @@ import { PersistGate } from "redux-persist/integration/react";
 import congifureStore from "./src/store/configureStore";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { HomeScreen } from "./src/components/screenContainers/Home";
-import { SignUpScreen } from "./src/components/screenContainers/Signup";
-import { LogInScreen } from "./src/components/screenContainers/Login";
+import { HomeScreen } from "./src/screens/Home/Home";
+import { SignUpScreen } from "./src/screens/Signup/Signup";
+import { LogInScreen } from "./src/screens/Login/Login";
 
 export default function App() {
 	const { store, persistor } = congifureStore();
