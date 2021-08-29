@@ -1,30 +1,28 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import congifureStore from "./src/store/configureStore";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { HomeScreen } from "./src/components/screenContainers/Home";
+import { SignUpScreen } from "./src/components/screenContainers/Signup";
+import { LogInScreen } from "./src/components/screenContainers/Login";
 
 export default function App() {
 	const { store, persistor } = congifureStore();
-	console.log("Hello world", store.getState());
+	const Stack = createNativeStackNavigator();
+
 	return (
 		<Provider store={store}>
 			<PersistGate loading={null} persistor={persistor}>
-				<View style={styles.container}>
-					<Text>Open up App.tsx to start working on your app!</Text>
-					<StatusBar style="auto" />
-				</View>
+				<NavigationContainer>
+					<Stack.Navigator>
+						<Stack.Screen name="Home" component={HomeScreen} />
+						<Stack.Screen name="Signup" component={SignUpScreen} />
+						<Stack.Screen name="Login" component={LogInScreen} />
+					</Stack.Navigator>
+				</NavigationContainer>
 			</PersistGate>
 		</Provider>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center"
-	}
-});
