@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import { paragraphBold, smallBold } from "../../../styles/textStyle";
 import { colors, radius } from "../../../constants/styleConstants";
-import { Spinner } from "./../animations/Spinner";
+import { Spinner } from "../animations/Spinner";
 
 export type ButtonProps = ViewProps & {
 	iconSrc?: ImageSourcePropType;

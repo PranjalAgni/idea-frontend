@@ -3,5 +3,5 @@ export enum ThemeActionTypes {
 }
 
 export interface ThemeState {
-	readonly mode: string | null;	
+	readonly mode: string | null;
 }

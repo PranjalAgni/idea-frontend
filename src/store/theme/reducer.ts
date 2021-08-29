@@ -14,7 +14,7 @@ const reducer: Reducer<ThemeState> = (state = initialState, action) => {
 				mode: action.payload
 			};
 		}
-        default: {
+		default: {
 			return state;
 		}
 	}
