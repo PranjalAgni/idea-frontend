@@ -9,12 +9,8 @@ import {
 	ViewProps,
 	ViewStyle
 } from "react-native";
-import {
-	colors,
-	paragraphBold,
-	radius,
-	smallBold
-} from "../../../constants/appStyle";
+import { paragraphBold, smallBold } from "../../../styles/textStyle";
+import { colors, radius } from "../../../constants/styleConstants";
 import { Spinner } from "./../animations/Spinner";
 
 export type ButtonProps = ViewProps & {
@@ -54,7 +50,7 @@ export const Button: React.FC<ButtonProps> = ({
 				<Image
 					source={iconSrc}
 					style={[
-						{ tintColor: colors.text, marginRight: 10, width: 20 },
+						{ tintColor: colors.white, marginRight: 10, width: 20 },
 						loading && { opacity: 0 }
 					]}
 				/>
@@ -107,11 +103,11 @@ const secondaryStyle = StyleSheet.create({
 	},
 	default: {
 		...containerBase,
-		backgroundColor: colors.primary700
+		backgroundColor: colors.cyanBlue
 	},
 	disabled: {
 		...containerBase,
-		backgroundColor: colors.primary300
+		backgroundColor: colors.cyanBlueDisabled
 	}
 });
 

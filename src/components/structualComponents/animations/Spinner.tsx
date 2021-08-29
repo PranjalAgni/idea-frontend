@@ -1,6 +1,6 @@
 import React from "react";
 import { Animated, Easing, ViewProps } from "react-native";
-import { colors } from "../../../constants/appStyle";
+import { colors } from "../../../constants/styleConstants";
 
 export type SpinnerProps = ViewProps & {
 	size?: "s" | "m";
@@ -37,8 +37,8 @@ export const Spinner: React.FC<SpinnerProps> = ({ style, size = "m" }) => {
 					borderColor: "transparent",
 					height: isSmall ? 12 : 20,
 					width: isSmall ? 12 : 20,
-					borderTopColor: colors.text,
-					borderLeftColor: colors.text,
+					borderTopColor: colors.white,
+					borderLeftColor: colors.white,
 					transform: [{ rotate: spin }]
 				}
 			]}

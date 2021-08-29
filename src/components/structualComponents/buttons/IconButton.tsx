@@ -7,7 +7,7 @@ import {
 	TouchableOpacity,
 	ViewStyle
 } from "react-native";
-import { colors } from "../../../constants/appStyle";
+import { colors } from "../../../constants/styleConstants";
 
 interface IconButtonProps {
 	style?: StyleProp<ViewStyle>;
@@ -20,7 +20,7 @@ export const IconButton: React.FC<IconButtonProps> = ({
 	style,
 	onPress,
 	icon,
-	iconColor = colors.text
+	iconColor = colors.white
 }) => {
 	return (
 		<TouchableOpacity style={[style, styles.container]} onPress={onPress}>
@@ -33,6 +33,6 @@ const styles = StyleSheet.create({
 	container: {
 		justifyContent: "center",
 		alignItems: "center",
-		backgroundColor: colors.primary900
+		backgroundColor: colors.cyanBlueHover
 	}
 });
